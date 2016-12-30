@@ -3,6 +3,7 @@ package com.nanda.algorithms;
 /**
  * Created by Nandakumar.Menon on 18-11-2016.
  */
+
 public class CountNumberOfIsland {
     public static void main(String[] args) {
 
