@@ -1,4 +1,4 @@
-package com.nanda.linkedlist;
+package com.nanda.doublelinkedlist;
 
 /**
  * Created by Nandakumar.Menon on 22-11-2016.
