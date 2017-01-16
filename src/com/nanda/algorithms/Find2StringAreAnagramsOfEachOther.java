@@ -11,9 +11,10 @@ package com.nanda.algorithms;
  */
 public class Find2StringAreAnagramsOfEachOther {
 
+
     public static void main(String[] args) {
-        String str1 = "abc";
-        String str2 = "abc";
+        String str1 = "army";
+        String str2 = "mary";
         System.out.println("Anagram?? :"+isAnagram(str1, str2));
     }
 
