@@ -7,6 +7,7 @@ import java.util.Stack;
  */
 public class QueueUsingStackApp {
     public static void main(String[] args) {
+
         QueueUsingSingleStack queueUsingStack = new QueueUsingSingleStack();
 
         queueUsingStack.enQueue(10);
@@ -30,20 +31,20 @@ public class QueueUsingStackApp {
     }
 }
 
-class QueueUsingSingleStack{
+class QueueUsingSingleStack {
     Stack<Integer> stack = new Stack<Integer>();
 
-    public void enQueue(int data){
+    public void enQueue(int data) {
         stack.add(data);
     }
 
-    public void deQueue(){
-        if(stack.size()<1){
+    public void deQueue() {
+        if (stack.size() < 1) {
             System.out.println("Nothing to deQueue");
             return;
         }
 
-        if(stack.size()==1){
+        if (stack.size() == 1) {
             System.out.println(stack.pop());
             return;
         }
