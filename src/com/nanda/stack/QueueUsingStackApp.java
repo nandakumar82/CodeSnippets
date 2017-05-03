@@ -50,7 +50,9 @@ class QueueUsingSingleStack {
         }
 
         int data = stack.pop();
+
         deQueue();
         stack.push(data);
+       // System.out.println("Dequed data "+data);
     }
 }
