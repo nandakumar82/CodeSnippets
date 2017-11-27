@@ -14,23 +14,19 @@ public class SearchString {
 
         for (int i = 0; i < sample.length; i++) {
 
-            if (startsWith(sample[i], toBeSearched, 0)) {
+            if (searchPrefixPresent(sample[i], toBeSearched)) {
                 output.add(sample[i]);
             }
         }
         System.out.println(output);
     }
 
-    private static boolean startsWith(String value, String prefix, int toffset) {
+    private static boolean searchPrefixPresent(String value, String prefix) {
         char sampleData[] = value.toCharArray();// value
-        int offset = toffset;
+        int offset = 0;
         char dataToBeSearched[] = prefix.toCharArray();//value to be searched
         int pointer = 0;
         int searchDataLength = prefix.length();
-        // Note: toffset might be near -1>>>1.
-        if ((toffset < 0) || (toffset > value.length() - searchDataLength)) {
-            return false;
-        }
         while (--searchDataLength >= 0) {
             if (sampleData[offset++] != dataToBeSearched[pointer++]) {
                 return false;
