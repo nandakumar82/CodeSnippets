@@ -203,7 +203,7 @@ public class JoinRods {
         int[] finalWeightArray;
         int weightIndex0;
         int weightIndexN;
-        int minimumEffort1 = 0;
+        int minimumEffort1;
         int minimumEffort2 = 0;
 
         weightIndex0 = weightArray[0];
