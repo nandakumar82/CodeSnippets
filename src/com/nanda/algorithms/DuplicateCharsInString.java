@@ -11,7 +11,7 @@ public class DuplicateCharsInString {
 
     public void findDuplicateChars(String str){
 
-        Map<Character, Integer> dupMap = new HashMap<Character, Integer>();
+        Map<Character, Integer> dupMap = new HashMap<>();
         char[] chrs = str.toCharArray();
         for(Character ch:chrs){
             if(dupMap.containsKey(ch)){
