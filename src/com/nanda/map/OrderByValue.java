@@ -17,10 +17,20 @@ public class OrderByValue {
         map.put("Why this kolavari", 93);
         Set<Map.Entry<String, Integer>> set = map.entrySet();
         List<Map.Entry<String, Integer>> list = new ArrayList<>(set);
-        list.sort((Comparator<Map.Entry<String, Integer>>) (o1, o2) -> {
+        /*list.sort((Comparator<Map.Entry<String, Integer>>) (o1, o2) -> {
 
             return (o2.getValue()).compareTo(o1.getValue());
-        });
+        });*/
+
+        /*Collections.sort( list, new Comparator<Map.Entry<String, Integer>>()
+        {
+
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2 )
+            {
+                return (o2.getValue()).compareTo( o1.getValue() );
+            }
+        } );*/
+        list.sort((o1, o2) -> (o2.getValue()).compareTo(o1.getValue()));
         for(Map.Entry<String, Integer> entry:list){
             System.out.println(entry.getKey()+" ==== "+entry.getValue());
         }
