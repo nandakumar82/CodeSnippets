@@ -42,4 +42,3 @@ class CountOnesBinaryArray
                 ob.countOnes(arr, 0, n-1) );
     }
 }
-/* This code is contributed by Rajat Mishra */
