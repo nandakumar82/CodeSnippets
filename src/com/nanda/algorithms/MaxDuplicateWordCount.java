@@ -1,19 +1,7 @@
 package com.nanda.algorithms;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 import java.util.Map.Entry;
 
 /**
@@ -56,7 +44,7 @@ public class MaxDuplicateWordCount {
     public List<Entry<String, Integer>> sortByValue(Map<String, Integer> wordMap){
 
         Set<Entry<String, Integer>> set = wordMap.entrySet();
-        List<Entry<String, Integer>> list = new ArrayList<Entry<String, Integer>>(set);
+        List<Entry<String, Integer>> list = new ArrayList<>(set);
         Collections.sort( list, new Comparator<Map.Entry<String, Integer>>()
         {
             public int compare( Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2 )
