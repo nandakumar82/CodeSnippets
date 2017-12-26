@@ -18,9 +18,12 @@ public class PassByValue {
 
     public static void foo(Dog d) {
         d.getName().equals("Max"); // true
+        //d.setName("Kuttus");
 
         d = new Dog("Fifi");
         d.getName().equals("Fifi"); // true
+
+
     }
 
     private static class Dog {
@@ -32,6 +35,10 @@ public class PassByValue {
 
         public String getName() {
             return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
         }
     }
 }
