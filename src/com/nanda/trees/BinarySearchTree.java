@@ -256,7 +256,7 @@ public class BinarySearchTree
             System.out.println("5. check empty");
 
             int choice = scan.nextInt();
-            switch (1)
+            switch (choice)
             {
                 case 1 :
                     System.out.println("Enter integer element to insert");
@@ -283,7 +283,7 @@ public class BinarySearchTree
             /*  Display tree  */
             System.out.print("\nPost order : ");
             bst.postorder();
-            System.out.print("\nPre order : ");
+    System.out.print("\nPre order : ");
             bst.preorder();
             System.out.print("\nIn order : ");
             bst.inorder();
