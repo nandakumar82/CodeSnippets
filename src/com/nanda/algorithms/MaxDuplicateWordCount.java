@@ -14,7 +14,7 @@ public class MaxDuplicateWordCount {
         FileInputStream fis = null;
         DataInputStream dis = null;
         BufferedReader br = null;
-        Map<String, Integer> wordMap = new HashMap<String, Integer>();
+        Map<String, Integer> wordMap = new HashMap<>();
         try {
             fis = new FileInputStream(fileName);
             dis = new DataInputStream(fis);
