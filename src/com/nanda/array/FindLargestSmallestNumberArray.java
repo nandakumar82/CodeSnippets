@@ -14,8 +14,10 @@ public class FindLargestSmallestNumberArray {
         if(arr==null || arr.length < 1){
             return;
         }
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
+//        int min = Integer.MAX_VALUE;
+//        int max = Integer.MIN_VALUE;
+        int min = arr[0];
+        int max = arr[0];
 
         for (int value : arr) {
             if(value < min){
