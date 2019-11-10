@@ -6,7 +6,7 @@ public class LambdaHelloWorld {
     }
 
     public static void main(String[] args) {
-        HelloWorld helloWorld = name -> "Hello " + name;
+        HelloWorld helloWorld = (name) -> "Hello " + name;
 
    /*     HelloWorld helloWorld = new HelloWorld() {
             @Override
