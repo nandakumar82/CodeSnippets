@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class OrderByValue {
 
-    public static void main(String a[]){
+    public static void main(String a[]) {
         Map<String, Integer> map = new HashMap<String, Integer>();
         map.put("java", 20);
         map.put("C++", 45);
@@ -30,9 +30,14 @@ public class OrderByValue {
                 return (o2.getValue()).compareTo( o1.getValue() );
             }
         } );*/
-        list.sort((o1, o2) -> (o2.getValue()).compareTo(o1.getValue()));
-        for(Map.Entry<String, Integer> entry:list){
-            System.out.println(entry.getKey()+" ==== "+entry.getValue());
+
+        list.sort(OrderByValue::compare);
+        for (Map.Entry<String, Integer> entry : list) {
+            System.out.println(entry.getKey() + " ==== " + entry.getValue());
         }
+    }
+
+    private static int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+        return (o2.getValue()).compareTo(o1.getValue());
     }
 }
