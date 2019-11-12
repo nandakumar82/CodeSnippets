@@ -22,6 +22,13 @@ public class MigratoryBirds {
         }
         Set<Entry<Integer, Integer>> set = birdMap.entrySet();
         List<Entry<Integer, Integer>> list = new ArrayList<>(set);
+       /* list.sort(new Comparator<Entry<Integer, Integer>>() {
+            @Override
+            public int compare(Entry<Integer, Integer> o1, Entry<Integer, Integer> o2) {
+                return (o2.getValue()).compareTo(o1.getValue());
+            }
+        });*/
+
         list.sort((o1, o2) -> (o2.getValue()).compareTo(o1.getValue()));
 
         for (Entry<Integer, Integer> entry : list) {
