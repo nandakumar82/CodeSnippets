@@ -8,7 +8,7 @@ import java.util.*;
 public class OrderByValue {
 
     public static void main(String a[]) {
-        Map<String, Integer> map = new HashMap<String, Integer>();
+        Map<String, Integer> map = new HashMap<>();
         map.put("java", 20);
         map.put("C++", 45);
         map.put("Java2Novice", 2);
