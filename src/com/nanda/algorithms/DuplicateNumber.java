@@ -25,9 +25,9 @@ public class DuplicateNumber {
      */
     public int findDuplicateNumber(List<Integer> numbers){
 
-        int highestNumber = numbers.size() - 1;
+        int size = numbers.size() - 1;
         int total = getSum(numbers);
-        int duplicate = total - (highestNumber*(highestNumber+1)/2);
+        int duplicate = total - (size*(size+1)/2);
         return duplicate;
     }
 
