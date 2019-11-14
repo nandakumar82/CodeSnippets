@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
  * Created by Nandak on Oct, 2019
  */
 
-public class FindDuplicates {;
+public class FindDuplicates {
 
-    ublic static void main(String[] args) {
+    public static void main(String[] args) {
         Integer[] numbers = new Integer[]{1, 2, 1, 3, 4, 4};
         Set<Integer> allItems = new HashSet<>();
         Set<Integer> duplicates = Arrays.stream(numbers)
