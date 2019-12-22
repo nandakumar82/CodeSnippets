@@ -7,6 +7,7 @@ package com.nanda.string;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class EvenOddStringCharacters {
 
@@ -20,6 +21,8 @@ public class EvenOddStringCharacters {
         String odd = "";
         List evenList = new ArrayList();
         List oddList = new ArrayList();
+        List evenListLambda = new ArrayList();
+        List oddListLambda = new ArrayList();
         //String word = sc.next();
         //Fetch the number of test cases
         count = sc.nextInt();
@@ -28,6 +31,10 @@ public class EvenOddStringCharacters {
         for (int i = 0; i < count; i++) {
             stringList.add(sc.next());
         }
+
+      /*  evenListLambda = stringList.stream().map(s->s.length()%2 == 0).collect(Collectors.toList());
+        oddListLambda = stringList.stream().map(s->s.length()%2 != 0).collect(Collectors.toList());
+*/
         for (String item : stringList) {
             char_array = item.toCharArray();
             for (int i = 0; i < char_array.length; i++) {
@@ -47,6 +54,9 @@ public class EvenOddStringCharacters {
 
         for (int i = 0; i < count; i++) {
             System.out.println(evenList.get(i) + " " + oddList.get(i));
+         /*   System.out.println("=========================================");
+            System.out.println(evenListLambda.get(i) + " " + oddListLambda.get(i));
+*/
         }
 
 

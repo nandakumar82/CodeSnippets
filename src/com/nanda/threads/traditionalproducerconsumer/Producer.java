@@ -5,40 +5,30 @@ import java.util.List;
 /**
  * Created by nandakumar.menon on 16-04-2017.
  */
-class Producer implements Runnable
-{
+class Producer implements Runnable {
     private final List<Integer> taskQueue;
-    private final int           MAX_CAPACITY;
+    private final int MAX_CAPACITY;
 
-    public Producer(List<Integer> sharedQueue, int size)
-    {
+    public Producer(List<Integer> sharedQueue, int size) {
         this.taskQueue = sharedQueue;
         this.MAX_CAPACITY = size;
     }
 
     @Override
-    public void run()
-    {
+    public void run() {
         int counter = 0;
-        while (true)
-        {
-            try
-            {
+        while (true) {
+            try {
                 produce(counter++);
-            }
-            catch (InterruptedException ex)
-            {
+            } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
         }
     }
 
-    private void produce(int i) throws InterruptedException
-    {
-        synchronized (taskQueue)
-        {
-            while (taskQueue.size() == MAX_CAPACITY)
-            {
+    private void produce(int i) throws InterruptedException {
+        synchronized (taskQueue) {
+            while (taskQueue.size() == MAX_CAPACITY) {
                 System.out.println("Queue is full " + Thread.currentThread().getName() + " is waiting , size: " + taskQueue.size());
                 taskQueue.wait();
             }

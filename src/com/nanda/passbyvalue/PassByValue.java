@@ -18,7 +18,7 @@ public class PassByValue {
 
     public static void foo(Dog d) {
         d.getName().equals("Max"); // true
-        //d.setName("Kuttus");
+//        d.setName("Kuttus");
 
         d = new Dog("Fifi");
         d.getName().equals("Fifi"); // true
