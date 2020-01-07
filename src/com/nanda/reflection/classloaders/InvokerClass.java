@@ -19,6 +19,7 @@ public class InvokerClass {
                 privateStringMethod.invoke(privateObject, null);
 
         System.out.println("returnValue = " + returnValue);
+        System.out.println();
     }
 
 }

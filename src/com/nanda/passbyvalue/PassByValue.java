@@ -22,6 +22,8 @@ public class PassByValue {
 
         d = new Dog("Fifi");
         d.getName().equals("Fifi"); // true
+                d.setName("Kuttus");
+
 
 
     }

@@ -30,7 +30,6 @@ public class OrderByValue {
                 return (o2.getValue()).compareTo( o1.getValue() );
             }
         } );*/
-
         list.sort(OrderByValue::compare);
         for (Map.Entry<String, Integer> entry : list) {
             System.out.println(entry.getKey() + " ==== " + entry.getValue());
