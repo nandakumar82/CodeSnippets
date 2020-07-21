@@ -20,6 +20,8 @@ public class DuplicateCharsInString {
                 dupMap.put(ch, 1);
             }
         }
+
+        dupMap.forEach((K,V) -> System.out.println(K + ", value : " + V));
         Set<Character> keys = dupMap.keySet();
         for(Character ch:keys){
             if(dupMap.get(ch) > 1){

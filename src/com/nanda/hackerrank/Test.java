@@ -1,0 +1,10 @@
+package com.nanda.hackerrank;
+
+/**
+ * Created by Nandak on Jul, 2020
+ */
+public class Test {
+    public static void main(String[] args) {
+        System.out.println(3%3);
+    }
+}
